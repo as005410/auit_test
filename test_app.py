@@ -2,15 +2,16 @@
 
 # Uzasadnienie podjętych decyzji projektowych pominiętych w opisie 
 
-# Dla podlączenia bazy danych PostgreSQL użyt moduł psycopg2
-# Stworzony odzielny plik konfiguracyjny .ini dla przechowywania informacji o bazie danych oraz plik config.py z funlcją odzytywania .ini pliku.
-# Dla komunikacji z MQTT brokerem użyt moduł paho-mqtt
-# Dla obsługi asynchronicznego działania MQTT brokera użyto moduł asyncio
-# Moduł statistics pozwala na obliczanie agregatów (min, max, median, average) dla danych pomiarowych
+# - Dla podlączenia bazy danych PostgreSQL użyt moduł psycopg2
+# - Stworzony odzielny plik konfiguracyjny .ini dla przechowywania informacji o bazie danych oraz plik config.py z funlcją odczytywania .ini pliku.
+# - Dla komunikacji z MQTT brokerem użyto moduł paho-mqtt
+# - Dla obsługi asynchronicznego działania MQTT brokera użyto moduł asyncio
+# - Moduł statistics pozwala na obliczanie agregatów (median, mean) dla danych pomiarowych
 
 # Opis ograniczeń zaproponowanego rozwiązania
 
-# Z powodu braku połączenia z brokerem aplikacja nie może odzytać dane  oraz ich przetwarzyć. Ale jeżeli załozuć że połączenie z brokerem istnee i aplikacja działa jak oczekiwano to dane pomiarowe (gdzie powinno być N pomiarów w T sekund) nie będą agregowane.
+# Z powodu braku połączenia z brokerem aplikacja nie może odczytać dane  oraz ich przetwarzać. Ale jeżeli założyć że połączenie z brokerem istnie i aplikacja działa jak oczekiwano to dane pomiarowe (gdzie powinno być N pomiarów w T sekund) nie będą agregowane.
+
 
 
 import random
